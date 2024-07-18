@@ -1,4 +1,4 @@
-#Calculating Time in HH:MM:SS format whwn a user give seconds in input
+# Q-Calculating Time in HH:MM:SS format whwn a user give seconds in input
 
 Time = int(input("Enter time in second = "))
 if(Time < 0):
