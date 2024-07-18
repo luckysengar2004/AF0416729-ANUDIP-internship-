@@ -1,4 +1,4 @@
-# UNDERSTANDING TUPLE AND SOLVING A PROBLEM GIVEN BELOW ON DATA FROM EXCEL.-
+# PROBLEM ON LIST - Creating a table and performing query using a list.
 import pandas as pd 
 from tabulate import tabulate
 
