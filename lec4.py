@@ -1,6 +1,8 @@
 # UNDERSTANDING TUPLE AND SOLVING A PROBLEM GIVEN BELOW ON DATA FROM EXCEL.-
-data = [
-    ["stdid", "stdname", "standard", "Age", "Hindi", "English", "Maths", "Science", "Computer", "Total"],
+import pandas as pd 
+from tabulate import tabulate
+
+Student = [
     ["std101", "Ashish Kumar", "10th", 15, 67, 89, 87, 89, 90, 422],
     ["std102", "Abhishek Kumar", "10th", 14, 90, 90, 90, 45, 45, 360],
     ["std103", "Aman", "10th", 15, 67, 56, 78, 78, 45, 313],
@@ -12,6 +14,11 @@ data = [
     ["std109", "Kamlesh", "10th", 15, 45, 78, 56, 67, 67, 303],
     ["std110", "Rohan", "10th", 15, 12, 24, 45,56,34,171]
 ]
+header =  ["stdid", "stdname", "standard", "Age", "Hindi", "English", "Maths", "Science", "Computer", "Total"]
+df=pd.DataFrame(data=Student,columns=header)
+student_tabulate= tabulate(df,headers=header,tablefmt="grid")
+print(student_tabulate)
+
 #1-Student having marks more than 50 in english:-
 print("Student having marks more than 50 in english:-")
 for row in data[1:]:
@@ -23,8 +30,6 @@ print("--------------------------------------------------------------")
 
 
 #2-Student name and age of top four scrorer in maths:-
-
-
 print("Student name and age of top four scrorer in maths:-")
 data_rows = data[1:]
 # Sort the data rows by the 'Maths' column (index 6) in descending order
@@ -40,8 +45,6 @@ print("--------------------------------------------------------------")
 
 
 # 3- bottom 3 scorers in computer are:-
-
-
 data_rows2 = data[1:]
 sorted_data2 = sorted(data_rows, key=lambda x: int(x[8]), reverse=False)
 
