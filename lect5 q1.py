@@ -41,9 +41,13 @@ Students = {
                 'Hindi': 12, 'English': 24, 'Maths': 45, 'Science': 56, 'Computer': 34,'Total':171
             }
  }
+# Q-1- Student having marks more than 50 in english:-
+
 for key, value in Students.items():
     if value['English'] > 50:
         print(value['stdname'])
+
+# Q-2- Student name and age of top four scrorer in maths:-
 
 # Extract Maths scores and corresponding student details
 math_scores = [(value['Maths'], value['stdname'], value['Age']) for value in Students.values()]
